@@ -8,4 +8,4 @@ class Post(models.Model):
     caption = models.TextField()
     
     def __str__(self):
-        return self.author.id
+        return self.author.username
