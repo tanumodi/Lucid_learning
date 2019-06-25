@@ -4,9 +4,9 @@ from .models import Post
 
 # Create your views here.
 def welcome(request):
-    user = request.user
-    posts = Post.objects.get(author = user)
-    posts
+    curruser = request.user
+    posts = Post.objects.filter(author = curruser)
+    # posts
     context = {
         'posts': posts
     }
