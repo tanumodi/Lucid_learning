@@ -1,0 +1,12 @@
+{% extends "home/base.html" %}
+{% block content %}
+	{% for profile_infom in profile_info %}
+		<h1>{{ profile_infom.user }}</h1>
+		<h3>{{ profile_infom.first_name }}  {{ profile_infom.last_name }}</h3><br><h6>Bio:</h6>
+		<h4>{{ profile_infom.bio}}</h4><br><br><br>
+	{% endfor %}
+	<h3>POSTS</h3>
+	{% for post in posts %}
+		<h6>{{ post.caption }}</h6>
+	{% endfor %}
+{% endblock content %}
